@@ -17,3 +17,11 @@ angular.module('starter', ['ionic', 'ngCordova'])
     }
   });
 })
+
+.controller("ProgressController", function($scope, $cordovaProgress) {
+
+    $scope.progressAnywhere = function() {
+        $cordovaProgress.showBarWithLabel(false, 100000, "Loading");
+    }
+
+});
